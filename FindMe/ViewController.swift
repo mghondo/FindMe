@@ -5,6 +5,7 @@
 //  Created by Morgan Hondros on 6/10/19.
 //  Copyright © 2019 Morgan Hondros. All rights reserved.
 //
+//
 
 import UIKit
 import MapKit
@@ -73,7 +74,7 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
+        checkLocationAuthorization()
     }
     
 }

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        checkLocationServices()
     }
     
     func setUpLocationManager() {
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setUpLocationManager()
+            checkLocationAuthorization()
         } else {
             
         }
@@ -41,8 +42,9 @@ class ViewController: UIViewController {
         case .denied:
             break
         case .notDetermined:
-            break
+            locationManager.requestWhenInUseAuthorization()
         case .restricted:
+            
             break
         case .authorizedAlways:
             break
@@ -54,11 +56,11 @@ class ViewController: UIViewController {
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        <#code#>
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        <#code#>
+        
     }
     
 }

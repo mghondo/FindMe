@@ -43,6 +43,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXx-Nm-5ap">
+                                <rect key="frame" x="279" y="697" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.27762232730000003" green="0.49008565990000003" blue="0.23559859869999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="NcM-3U-WwM"/>
+                                    <constraint firstAttribute="width" constant="75" id="ibM-4M-0NR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="vJY-Em-DbI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                <color key="tintColor" red="0.27762232730000003" green="0.49008565990000003" blue="0.23559859869999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZg-tp-tPl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -53,6 +70,8 @@
                             <constraint firstAttribute="trailing" secondItem="A0B-dV-NMZ" secondAttribute="trailing" id="JIM-el-v6s"/>
                             <constraint firstItem="3fh-XC-1TR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PTY-Vl-hYn"/>
                             <constraint firstItem="6aS-PB-ked" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0a-6k-MOL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fXx-Nm-5ap" secondAttribute="trailing" constant="40" id="kya-Md-6jC"/>
+                            <constraint firstItem="A0B-dV-NMZ" firstAttribute="top" secondItem="fXx-Nm-5ap" secondAttribute="bottom" constant="30" id="n4m-PE-7C1"/>
                             <constraint firstItem="6aS-PB-ked" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="pmN-nR-wjU"/>
                             <constraint firstItem="A0B-dV-NMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="psi-CP-QO6"/>
                         </constraints>
@@ -60,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="A0B-dV-NMZ" id="Xas-22-b7t"/>
+                        <outlet property="goButtonTappedLabel" destination="fXx-Nm-5ap" id="yP6-ql-UR9"/>
                         <outlet property="mapView" destination="3fh-XC-1TR" id="fZ4-v5-Anf"/>
                     </connections>
                 </viewController>

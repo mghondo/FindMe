@@ -87,6 +87,9 @@ class ViewController: UIViewController {
             return
         }
         
+        // Put some code in here to label the apprival time. look at MKDirections
+        // calculateETA(completionHandler: @escaping MKDirections.ETAHandler)
+        
         let request = creatsDirectionsRequest(from: location)
         let directions = MKDirections(request: request)
         resetMapView(withNew: directions)
@@ -113,6 +116,8 @@ class ViewController: UIViewController {
         request.destination                 = MKMapItem(placemark: destination)
         request.transportType               = .automobile
         request.requestsAlternateRoutes     = true
+        
+        // Find ETA here. 
         
         return request
     }
